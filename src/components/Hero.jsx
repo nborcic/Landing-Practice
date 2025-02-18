@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
+
 const Hero = () => {
   const images = [
     "/images/hero1.jpg",
@@ -41,7 +41,7 @@ const Hero = () => {
           <motion.p
             className="text-xl mb-8"
             initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}  
+            animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             Transform your social media presence with us
@@ -61,4 +61,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
