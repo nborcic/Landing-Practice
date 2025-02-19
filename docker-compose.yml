@@ -1,0 +1,14 @@
+
+
+services:
+  social-media-app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3005:3005"
+     
+    volumes:
+      - ./src:/app/src
+    restart: unless-stopped
+

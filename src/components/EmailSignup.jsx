@@ -7,7 +7,7 @@ const EmailSignup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your email signup logic here
+    //  emailer signup
     setStatus("Thank you for subscribing!");
     setEmail("");
   };

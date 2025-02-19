@@ -8,8 +8,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-gray-900 text-white pt-16 pb-8 max-w-[1440px]">
+      <div className=" mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <h3 className="text-2xl font-bold mb-4">SocialBrand</h3>
           <p className="text-gray-400 mb-4">

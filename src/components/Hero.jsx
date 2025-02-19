@@ -1,15 +1,13 @@
 import { motion } from "framer-motion";
-
+import hero1 from "../assets/hero1.webp";
+import hero2 from "../assets/hero2.webp";
+import hero3 from "../assets/hero3.jpg";
+import hero4 from "../assets/hero4.jpg";
 const Hero = () => {
-  const images = [
-    "/images/hero1.jpg",
-    "/images/hero2.jpg",
-    "/images/hero3.jpg",
-    "/images/hero4.jpg",
-  ];
+  const images = [hero1, hero2, hero3, hero4];
 
   return (
-    <div className="relative h-screen">
+    <div className="relative h-screen w-screen max-w-[1440px]">
       <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-4 p-4">
         {images.map((image, index) => (
           <motion.div
@@ -47,7 +45,7 @@ const Hero = () => {
             Transform your social media presence with us
           </motion.p>
           <motion.button
-            className="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full"
+            className="bg-primary hover:bg-primary-dark text-black font-bold py-3 px-8 rounded-full"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
