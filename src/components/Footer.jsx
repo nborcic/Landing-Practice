@@ -2,18 +2,24 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   const blogPosts = [
-    { title: "Top 10 Social Media Trends", link: "/blog/trends" },
-    { title: "Maximizing Your Online Presence", link: "/blog/online-presence" },
-    { title: "Building Your Brand Identity", link: "/blog/brand-identity" },
+    { title: "Social Media Strategy Guide", link: "/blog/strategy-guide" },
+    { title: "Content Creation Tips", link: "/blog/content-creation" },
+    { title: "ROI Measurement Guide", link: "/blog/measure-roi" },
+  ];
+
+  const resources = [
+    { title: "Case Studies", link: "/resources/case-studies" },
+    { title: "Free Templates", link: "/resources/templates" },
+    { title: "Industry Reports", link: "/resources/reports" },
   ];
 
   return (
     <div className="w-screen flex justify-center items-center">
-      <footer className="w-full bg-gray-900 text-white ">
+      <footer className="w-full bg-gray-900 text-white">
         <div className="w-full max-w-[1440px] mx-auto px-4 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h2 className="text-2xl font-bold mb-4">SocialBrand</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4">SocialBrand</h3>
               <p className="text-gray-400 mb-4">
                 Transforming social media presence for businesses worldwide.
               </p>
@@ -34,7 +40,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <h4 className="text-xl font-bold mb-4">Latest Blog Posts</h4>
+              <h3 className="text-xl font-bold mb-4">Latest Insights</h3>
               <ul className="space-y-2">
                 {blogPosts.map((post, index) => (
                   <li key={index}>
@@ -50,7 +56,23 @@ const Footer = () => {
             </div>
 
             <div>
-              <h4 className="text-xl font-bold mb-4">Quick Links</h4>
+              <h3 className="text-xl font-bold mb-4">Resources</h3>
+              <ul className="space-y-2">
+                {resources.map((resource, index) => (
+                  <li key={index}>
+                    <Link
+                      to={resource.link}
+                      className="text-gray-400 hover:text-primary"
+                    >
+                      {resource.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold mb-4">Company</h3>
               <ul className="space-y-2">
                 <li>
                   <Link
@@ -70,10 +92,26 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
+                    to="/pricing"
+                    className="text-gray-400 hover:text-primary"
+                  >
+                    Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     to="/contact"
                     className="text-gray-400 hover:text-primary"
                   >
                     Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/terms"
+                    className="text-gray-400 hover:text-primary"
+                  >
+                    Terms of Service
                   </Link>
                 </li>
                 <li>

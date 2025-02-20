@@ -4,24 +4,28 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   const images = [
     {
-      src: "https://images.unsplash.com/photo-1611162617474-5b21e879e113",
-      alt: "Social Media Marketing",
+      src: "src/assets/social-media-marketing-strategy.webp",
+      alt: "Professional team analyzing social media marketing metrics on large screen",
       title: "Marketing Strategy",
+      loading: "eager",
     },
     {
-      src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      alt: "Content Creation",
+      src: "src/assets/content-creation-workspace.webp",
+      alt: "Creative content team collaborating on digital content creation",
       title: "Content Creation",
+      loading: "lazy",
     },
     {
-      src: "https://images.unsplash.com/photo-1553877522-43269d4ea984",
-      alt: "Analytics Dashboard",
+      src: "src/assets/data-analytics-dashboard.jpg",
+      alt: "Interactive analytics dashboard showing social media performance metrics",
       title: "Data Analytics",
+      loading: "lazy",
     },
     {
-      src: "https://images.unsplash.com/photo-1551434678-e076c223a692",
-      alt: "Team Collaboration",
+      src: "src/assets/team-collaboration-meeting.jpg",
+      alt: "Diverse team members collaborating in modern office environment",
       title: "Team Success",
+      loading: "lazy",
     },
   ];
 
@@ -39,6 +43,9 @@ const Hero = () => {
             <img
               src={image.src}
               alt={image.alt}
+              loading={image.loading}
+              width="800"
+              height="600"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300">
@@ -77,13 +84,13 @@ const Hero = () => {
           >
             <Link
               to="/get-started"
-              className="bg-primary bg-white/10 hover:bg-white/20 backdrop-blur-sm hover:bg-primary-dark text-black font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+              className="bg-primary hover:bg-primary-dark text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-110 hover:shadow-2xl shadow-lg backdrop-blur-sm hover:backdrop-blur-xl min-w-[200px] text-center"
             >
               Get Started Now
             </Link>
             <Link
               to="/portfolio"
-              className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-full backdrop-blur-sm transition-all duration-300"
+              className="bg-primary hover:bg-primary-dark text-white font-bold py-4 px-8 rounded-full transition-all  duration-300 transform hover:scale-110 hover:shadow-2xl shadow-lg backdrop-blur-sm hover:backdrop-blur-xl min-w-[200px] text-center"
             >
               View Our Work
             </Link>

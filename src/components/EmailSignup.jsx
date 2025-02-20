@@ -96,7 +96,7 @@ const EmailSignup = () => {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="absolute right-2 top-1.5 px-6 py-2 bg-primary hover:bg-primary-dark text-white rounded-full transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center min-w-[100px]"
+                className="absolute right-2 top-1.5 px-8 py-2.5 bg-white hover:bg-white/90 text-primary font-bold rounded-full transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center min-w-[120px] transform hover:scale-105 hover:shadow-xl shadow-md"
               >
                 {isLoading ? (
                   <motion.div
@@ -106,10 +106,10 @@ const EmailSignup = () => {
                       repeat: Infinity,
                       ease: "linear",
                     }}
-                    className="w-5 h-5 border-2  text-black  border-t-transparent rounded-full"
+                    className="w-5 h-5 border-2 border-primary border-t-transparent rounded-full"
                   />
                 ) : (
-                  <p className="text-black ">Subscribe</p>
+                  <span className="text-primary font-bold">Subscribe</span>
                 )}
               </button>
             </div>
@@ -164,14 +164,14 @@ const EmailSignup = () => {
           </AnimatePresence>
 
           <motion.div
-            className="mt-8 flex justify-center gap-8 text-white/80"
+            className="mt-8 flex flex-wrap justify-center gap-8 text-white/80"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
               <svg
-                className="w-5 h-5"
+                className="w-5 h-5 text-white"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -183,13 +183,11 @@ const EmailSignup = () => {
                   d="M13 10V3L4 14h7v7l9-11h-7z"
                 />
               </svg>
-              <span className="text-black   rounded-full px-2 py-1">
-                Weekly Updates
-              </span>
+              <span className="text-white font-medium">Weekly Updates</span>
             </div>
-            <div className="flex items-center gap-2 text-black  rounded-full px-2 py-1">
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
               <svg
-                className="w-5 h-5"
+                className="w-5 h-5 text-white"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -201,7 +199,7 @@ const EmailSignup = () => {
                   d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                 />
               </svg>
-              <span>No Spam</span>
+              <span className="text-white font-medium">No Spam</span>
             </div>
           </motion.div>
         </motion.div>
