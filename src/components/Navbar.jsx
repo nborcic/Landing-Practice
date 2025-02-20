@@ -14,9 +14,9 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className=" flex justify-center w-screen  ">
+    <div className=" flex justify-center w-screen   ">
       <nav
-        className={`fixed max-w-[1860px] w-full z-50 transition-all duration-300 ${
+        className={`fixed max-w-[1860px] w-full z-50 transition-all p-2 duration-300 ${
           isScrolled
             ? "bg-white/90 backdrop-blur-md shadow-lg rounded-xl"
             : "bg-transparent"

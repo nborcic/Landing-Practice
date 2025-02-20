@@ -27,7 +27,7 @@ const Hero = () => {
 
   return (
     <div className=" w-full max-w-[1440px] h-screen">
-      <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-4 p-4">
+      <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-4 p-2">
         {images.map((image, index) => (
           <motion.div
             key={index}

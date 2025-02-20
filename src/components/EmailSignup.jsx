@@ -46,7 +46,7 @@ const EmailSignup = () => {
   };
 
   return (
-    <div className="py-16 w-screen flex justify-center bg-gradient-to-b from-primary to-primary-dark">
+    <div className="py-60 w-screen flex justify-center bg-gradient-to-b from-primary to-primary-dark">
       <div className="w-full max-w-[1440px] px-4">
         <motion.div
           className="text-center max-w-4xl mx-auto"
